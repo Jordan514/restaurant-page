@@ -26,7 +26,7 @@ function pageload() {
       data: "https://www.thecookierookie.com/wp-content/uploads/2023/04/featured-stovetop-burgers-recipe.jpg",
     },
     { attribute: "alt", data: "" },
-    { attribute: "style", data: "height: 500px; width: auto" },
+    { attribute: "style", data: "height: 500px; width: 500px" },
   ]);
   addElementToContent(
     "div",
