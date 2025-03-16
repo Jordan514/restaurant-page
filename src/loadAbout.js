@@ -1,22 +1,6 @@
-function addElementToContent(
-  element = "div",
-  textContent = "",
-  AttributeObjects = []
-) {
-  let content = document.querySelector("#content");
+import { addElementToContent } from "./addElementToContent";
 
-  let newElement = document.createElement(element);
-
-  textContent ? (newElement.textContent = textContent) : undefined;
-
-  AttributeObjects.forEach((obj) =>
-    newElement.setAttribute(obj.attribute, obj.data)
-  );
-
-  content.appendChild(newElement);
-}
-
-function pageload() {
+function loadAbout() {
   addElementToContent("div", "Jordan's Burger Factory", [
     { attribute: "class", data: "headline" },
   ]);
@@ -38,4 +22,4 @@ function pageload() {
   );
 }
 
-export { pageload };
+export { loadAbout };
