@@ -1,8 +1,5 @@
-function addElementToContent(
-  element = "div",
-  textContent = "",
-  AttributeObjects = []
-) {
+//Standard module for creating a general type of element
+function sModule(element = "div", textContent = "", AttributeObjects = []) {
   let content = document.querySelector("#content");
 
   let newElement = document.createElement(element);
@@ -15,4 +12,14 @@ function addElementToContent(
   content.appendChild(newElement);
 }
 
-export { addElementToContent };
+const DOM = (() => {
+  const title = () => {
+    //function to create a title element
+  };
+
+  return {
+    title,
+  };
+})();
+
+export { sModule, DOM };

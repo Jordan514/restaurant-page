@@ -1,10 +1,10 @@
-import { addElementToContent } from "./addElementToContent";
+import { sModule } from "./sModule";
 
 function loadHome() {
-  addElementToContent("div", "Jordan's Burger Factory", [
+  sModule("div", "Jordan's Burger Factory", [
     { attribute: "class", data: "headline" },
   ]);
-  addElementToContent("img", "", [
+  sModule("img", "", [
     {
       attribute: "src",
       data: "https://www.thecookierookie.com/wp-content/uploads/2023/04/featured-stovetop-burgers-recipe.jpg",
@@ -12,7 +12,7 @@ function loadHome() {
     { attribute: "alt", data: "" },
     { attribute: "style", data: "height: 500px; width: 500px" },
   ]);
-  addElementToContent(
+  sModule(
     "div",
     `Jordans Burger factory is full of the best burgers in america! From our
         classic american cheeseburger to our portobella new jersey burger to our
