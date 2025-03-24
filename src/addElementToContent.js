@@ -12,7 +12,6 @@ function addElementToContent(
   AttributeObjects.forEach((obj) =>
     newElement.setAttribute(obj.attribute, obj.data)
   );
-
   content.appendChild(newElement);
 }
 
