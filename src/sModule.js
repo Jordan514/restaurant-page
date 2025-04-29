@@ -13,12 +13,29 @@ function sModule(element = "div", textContent = "", AttributeObjects = []) {
 }
 
 const DOM = (() => {
-  const title = () => {
-    //function to create a title element
+  const title = (parentElement, txt) => {
+    let newElement = document.createElement("div");
+    newElement.textContent = txt;
+    parentElement.appendChild(newElement);
+  };
+
+  const img = (parentElement, src, height, width) => {
+    let newElement = document.createElement("img");
+    newElement.setAttribute("src", src);
+    newElement.setAttribute("style", `height: ${height}; width: ${width}`);
+    parentElement.appendChild(newElement);
+  };
+
+  const description = (parentElement, txt) => {
+    let newElement = document.createElement("div");
+    newElement.textContent = txt;
+    parentElement.appendChild(newElement);
   };
 
   return {
     title,
+    img,
+    description,
   };
 })();
 
